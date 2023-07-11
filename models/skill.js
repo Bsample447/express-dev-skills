@@ -1,8 +1,8 @@
 const skills = [
-    { id: 1253, skill: "Time Management", has: true },
-    { id: 1274, skill: "AWS cloud architecture ", has: true },
-    { id: 1398, skill: "Some Python and SQL", has: true },
-    { id: 1398, skill: "Good jokes", has: false },
+    { id: 1111, skill: "Time Management", has: true },
+    { id: 2222, skill: "AWS cloud architecture ", has: true },
+    { id: 3333, skill: "Some Python and SQL", has: true },
+    { id: 4444, skill: "Good jokes", has: false },
   ];
   
   function getAll() {
