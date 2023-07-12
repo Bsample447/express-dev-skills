@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Express To-Do</title>
-  </head>
-  <body>
-    <h1>Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-      <li>
-        <a href="/skills/<%= s.id %>"><%= s.skill %></a> - <%= s.has ? 'yes' :
-        'no' %>
-      </li>
-      <% }); %>
-    </ul>
-  </body>
-</html>
+<%- include('../partials/header') %>
+
+<h3>skills as of <%= time %></h3>
+
+<ul>
+  <% skills.forEach(function(t) { %>
+    <li>
+      <form
+        action="/skills/<%= t.id %>?_method=DELETE"
+        method="POST"
+        class="delete-form"
+      >
+        <button type="submit">X</button>
+      </form>
+      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+      - 
+      <%= t.done ? 'done' : 'not done' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new">Add skill</a>
+
+  
+<%- include('../partials/footer') %>
