@@ -1,1 +1,12 @@
+<%- include('../partials/header') %>
+
+<form action="/skills" method="POST">
+  <input type="text" name="skill" ><br>
+  <label>
+    <input type="checkbox" name="done" >
+    Completed
+  </label><br>
+  <button type="submit">New skill</button>
+</form>
+
 <%- include('../partials/footer') %>

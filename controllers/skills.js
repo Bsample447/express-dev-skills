@@ -8,10 +8,10 @@ function update(req, res) {
 }
 
 function edit(req, res) {
-  const skills = skills.getOne(req.params.id);
+  const entry = skill.getOne(req.params.id);
   res.render('skills/edit', {
     title: 'Edit skill',
-    skill
+    entry
   });
 }
 
@@ -29,7 +29,7 @@ function create(req, res) {
 }
 
 function newSkill(req, res) {
-  res.render('skills/new', { title: 'New skills' });
+  res.render('skills/new',  { title: 'New skills' });  
 }
 
 function show(req, res) {

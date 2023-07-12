@@ -1,6 +1,6 @@
 const skills = [
-  {id: 1111, skill: 'stuff', done: true},
-  {id: 2222, skill: 'things', done: false},
+  {id: 1111, skill: 'express creation', done: false},
+  {id: 2222, skill: 'Spaceman game', done: true},
   {id: 3333, skill: 'bad jokes', done: true}
 ];
 
