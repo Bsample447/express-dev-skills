@@ -1,14 +1,5 @@
 const skill = require('../models/skill.js');
 
-module.exports = {
-  index,
-  show,
-  new: newSkill,
-  create,
-  delete: deleteSkill,
-  edit,
-  update
-};
 
 function update(req, res) {
   req.body.done = !!req.body.done;
@@ -18,7 +9,7 @@ function update(req, res) {
 
 function edit(req, res) {
   const skills = skills.getOne(req.params.id);
-  res.render('todos/edit', {
+  res.render('skills/edit', {
     title: 'Edit skill',
     skill
   });
@@ -32,7 +23,7 @@ function deleteSkill(req, res) {
 function create(req, res) {
   console.log(req.body);
   // Models are responible for CRUD'ing the data
-  Todo.create(req.body);
+  skill.create(req.body);
   // Always do a redirect when data has been changed
   res.redirect('/skills');
 }
@@ -54,3 +45,13 @@ function index(req, res) {
     title: 'All skills'
   });
 }
+
+module.exports = {
+  index,
+  show,
+  new: newSkill,
+  create,
+  delete: deleteSkill,
+  edit,
+  update
+};
